@@ -1,18 +1,3 @@
-<html>
-<head>
-    <title>Funnelbot</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-</head>
-<body>
-<iframe
-    allow="microphone;"
-    width="350"
-    height="430"
-    src="https://console.dialogflow.com/api-client/demo/embedded/863f070f-d89a-46ee-b346-cf42658337ca">
-</iframe>
-</body>
-
 <?php
 
 $method = $_SERVER['REQUEST_METHOD'];
@@ -25,19 +10,19 @@ if($method == 'POST'){
 
     switch ($text) {
         case 'hi':
-            $speech = "Hi, Nice to meet you";
+            $speech = "hallo";
             break;
 
-        case 'bye':
-            $speech = "Bye, good night";
+        case 'doei':
+            $speech = "doei";
             break;
 
-        case 'anything':
-            $speech = "Yes, you can type anything here.";
+        case 'test':
+            $speech = "ok";
             break;
 
         default:
-            $speech = "Sorry, I didnt get that. Please ask me something else.";
+            $speech = "default";
             break;
     }
 
@@ -53,4 +38,3 @@ else
 }
 
 ?>
-</html>
