@@ -1,12 +1,5 @@
 <?php
 
-$con=mysqli_connect("localhost","root","","test");
-// Check connection
-if (mysqli_connect_errno())
-{
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-
 $method = $_SERVER['REQUEST_METHOD'];
 
 if($method == 'POST'){
@@ -17,7 +10,7 @@ if($method == 'POST'){
 
     switch ($text) {
         case 'hi':
-            $speech = mysqli_query($con,"SELECT * FROM test_table");
+            $speech = "hallo";
             break;
 
         case 'doei':
