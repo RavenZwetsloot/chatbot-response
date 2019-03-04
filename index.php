@@ -41,7 +41,7 @@ if($method == 'POST'){
             break;
     }
 
-    $response = new stdClass();
+    $response = new \stdClass();
     $response->speech = $speech;
     $response->displayText = $speech;
     $response->source = "webhook";
