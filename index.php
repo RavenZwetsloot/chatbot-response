@@ -7,7 +7,7 @@ if (mysqli_connect_errno())
   }
 
 // Perform queries
-/*mysqli_query($con,"SELECT * FROM Persons");
+/*
 
 mysqli_close($con);*/
 
@@ -20,7 +20,7 @@ if($method == 'POST'){
     $text = $json->result->parameters->text;
 
     if ($text == $text){
-        $speech = "het werkt";
+        $speech = mysqli_query($con,"SELECT description FROM address_table");
     }
     else{
         $speech = "het werkt niet";
