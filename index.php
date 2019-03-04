@@ -8,15 +8,8 @@ if($method == 'POST'){
 
     $text = $json->result->parameters->text;
 
-    $con=mysqli_connect("localhost","root","","test");
-    if (mysqli_connect_errno())
-    {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
-
     if ($text == $text){
         $speech = "het werkt";
-        $speech = mysqli_query($con,"SELECT desciption FROM address_table WHERE address = '$text' ");
     }
     else{
         $speech = "het werkt niet";
