@@ -8,22 +8,11 @@ if($method == 'POST'){
 
     $text = $json->result->parameters->text;
 
-    switch ($text) {
-        case 'hi':
-            $speech = "hallo";
-            break;
-
-        case 'doei':
-            $speech = "doei";
-            break;
-
-        case 'test':
-            $speech = "ok";
-            break;
-
-        default:
-            $speech = "default";
-            break;
+    if ($text == $text){
+        $speech = "het werkt";
+    }
+    else{
+        $speech = "het werkt niet";
     }
 
     $response = new stdClass();
