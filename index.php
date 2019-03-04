@@ -9,7 +9,7 @@ if (mysqli_connect_errno())
 // Perform queries
 /*mysqli_query($con,"SELECT * FROM Persons");
 
-mysqli_close($con);*/
+*/
 
 $method = $_SERVER['REQUEST_METHOD'];
 
@@ -36,5 +36,7 @@ else
 {
     echo "Method not allowed";
 }
+
+mysqli_close($con);
 
 ?>
